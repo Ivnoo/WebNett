@@ -1,0 +1,11 @@
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\bin\Debug\Client.exe.config
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\bin\Debug\Client.exe
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\bin\Debug\Client.pdb
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.Form1.resources
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.exe
+C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\obj\Debug\Client.pdb

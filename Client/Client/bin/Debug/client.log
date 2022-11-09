@@ -1,42 +1,5 @@
-28/10/2022 16:34:41	Error
-Socket Exception: System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
-   at Client.Form1.Connection.start() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 9028/10/2022 19:02:41	Error
-Socket Exception: System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
-   at Client.Form1.Manager.start() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 10628/10/2022 21:44:37	Error	Generic Error: System.InvalidOperationException: Cross-thread operation not valid: Control 'lblStatus' accessed from a thread other than the thread it was created on.
-   at System.Windows.Forms.Control.get_Handle()
-   at System.Windows.Forms.Control.set_WindowText(String value)
-   at System.Windows.Forms.Control.set_Text(String value)
-   at System.Windows.Forms.Label.set_Text(String value)
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 5328/10/2022 21:48:40	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
+30/10/2022 22:10:37	Info	Connesso a 127.0.0.1:800
+30/10/2022 22:11:00	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
    at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 136
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 5628/10/2022 21:53:00	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
-   at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 136
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 56
-28/10/2022 21:53:27	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
-   at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 136
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 56
-28/10/2022 21:53:37	Error
-Socket Exception: System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
-   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.Socket.Send(Byte[] buffer)
-   at Client.Form1.Manager.start() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 104
-28/10/2022 21:56:48	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
-   at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 139
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 56
-28/10/2022 21:59:16	Error
-Socket Exception: System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
-   at Client.Form1.Manager.start() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 112
-28/10/2022 22:01:39	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
-   at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 139
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 56
+   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 141
+   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 66

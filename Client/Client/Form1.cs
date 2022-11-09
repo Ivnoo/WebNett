@@ -23,16 +23,17 @@ namespace Client
 
         public static bool check=false;
         public static bool started = false;
-        
-        public static string log = @"client.log";
+        public static string dataSend = "";
+        public static string cookie = @"cookie.log";
+        public static string www = "www";
 
 
-
+        //public static string log = @"client.log";
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!File.Exists(log))
-                File.Create(log);
+            if (!File.Exists(cookie))
+                File.Create(cookie);
         }
 
         public void listening()
@@ -46,7 +47,6 @@ namespace Client
 
                 Socket sender = new Socket(ipAddress.AddressFamily,
                     SocketType.Stream, ProtocolType.Tcp);
-                Random stringa_casuale = new Random();
 
                 Manager m = new Manager(sender, ipAddress, remoteEP);
 
@@ -59,11 +59,10 @@ namespace Client
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
-                File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tGeneric Error: " + e.ToString() + "\n");
+                //File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tGeneric Error: " + e.ToString() + "\n");
             }
         }
 
-        
 
         class Manager
         {
@@ -84,8 +83,6 @@ namespace Client
                 int count = 0;
                 string dataReceived = "";
                 string dataSend = "";
-                Random stringa_casuale = new Random();
-
 
                 try
                 {
@@ -93,24 +90,39 @@ namespace Client
 
                     Console.WriteLine("Socket connected to {0}",
                         socket.RemoteEndPoint.ToString());
+                    //File.WriteAllText(log, DateTime.Now.ToString() + "\tInfo\tConnesso a " + socket.RemoteEndPoint.ToString() + "\n");
 
-                    Console.WriteLine(ipAddress.ToString());
 
-                    dataSend = ipAddress.ToString() + ";";
+                    dataSend = "get;index.html";
+                    byte[] msg = Encoding.ASCII.GetBytes(dataSend);
+                    socket.Send(msg);
+
+                    int bytesRec = socket.Receive(bytes);
+                    dataReceived += Encoding.ASCII.GetString(bytes, 0, bytesRec);
 
                     while (dataReceived != "Quit$")
                     {
+                        string[] content = dataReceived.Split(';');
+
+                        switch (content[0])
+                        {
+                            case "200":
+                                string html=content[1];
+                                break;
+                            case "404":
+                                MessageBox.Show("Risorsa non trovata", "ERRORE");
+                                break;
+                        }
 
 
-                        byte[] msg = Encoding.ASCII.GetBytes(dataSend);              //("This is a test<EOF>");
-
-                        int bytesSent = socket.Send(msg);
-                        dataReceived = "";
+                        if (content[0].IndexOf("get") > -1)
+                        {
+                                                                
+                        }
 
                         while (dataReceived.IndexOf("$") == -1)
                         {
-                            int bytesRec = socket.Receive(bytes);
-                            dataReceived += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                            
                         }
                         Console.WriteLine("Messaggio ricevuto: " + dataReceived);
                         Thread.Sleep(1000);
@@ -120,17 +132,17 @@ namespace Client
                 catch (ArgumentNullException ane)
                 {
                     Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
-                    File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tArgumentNull Exception: " + ane.ToString() + "\n");
+                    //File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tArgumentNull Exception: " + ane.ToString() + "\n");
                 }
                 catch (SocketException se)
                 {
                     Console.WriteLine("SocketException : {0}", se.ToString());
-                    File.AppendAllText(log, DateTime.Now.ToString() + "\tError\nSocket Exception: " + se.ToString() + "\n");
+                    //File.AppendAllText(log, DateTime.Now.ToString() + "\tError\nSocket Exception: " + se.ToString() + "\n");
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("Unexpected exception : {0}", e.ToString());
-                    File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tUnexpected Exception: " + e.ToString() + "\n");
+                    //File.AppendAllText(log, DateTime.Now.ToString() + "\tError\tUnexpected Exception: " + e.ToString() + "\n");
                 }
             }
 
@@ -147,12 +159,13 @@ namespace Client
         {
             Thread ui = new Thread(listening);
             ui.Start();
+
             check = true;
+        }
 
-            if (check == true)
-            {
-
-            }
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            dataSend = "getAll";
         }
     }
 }

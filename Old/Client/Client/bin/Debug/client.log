@@ -1,5 +1,0 @@
-30/10/2022 22:10:37	Info	Connesso a 127.0.0.1:800
-30/10/2022 22:11:00	Error	Generic Error: System.Net.Sockets.SocketException (0x80004005): A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
-   at System.Net.Sockets.Socket.Shutdown(SocketShutdown how)
-   at Client.Form1.Manager.stop() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 141
-   at Client.Form1.listening() in C:\Users\ivan0\Documents\GitHub Repos\tps-5ib-webserver_project\Client\Client\Form1.cs:line 66
